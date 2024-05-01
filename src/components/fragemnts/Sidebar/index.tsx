@@ -11,6 +11,7 @@ import { MdOutlineTableChart } from "react-icons/md";
 import { GrArticle } from "react-icons/gr";
 import { RxDashboard } from "react-icons/rx";
 import { FaFilePen } from "react-icons/fa6";
+import { FaMoneyBills } from "react-icons/fa6";
 
 interface SidebarProps {
   sidebarOpen: boolean;
@@ -67,7 +68,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   return (
     <aside
       ref={sidebar}
-      className={`absolute left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-black duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
+      className={`absolute left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-white duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
     >
       {/* <!-- SIDEBAR HEADER --> */}
@@ -118,8 +119,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
             <ul className="mb-6 flex flex-col gap-1.5">
               {/* <!-- Menu Item Dashboard --> */}
               <NavigationList icon={<RxDashboard size={19} />} title="Dasboard" pathname="/dashboard" />
-              <NavigationList icon={<GrArticle size={19} />} title="All Article" pathname="/all_news_admin" />
-              <NavigationList icon={<FaFilePen size={19} />} title="Create Article" pathname="/create_articles" />
+              <NavigationList icon={<FaMoneyBills size={19} />} title="Transaction" pathname="/transaction" />
+              <NavigationList icon={<FaFilePen size={19} />} title="History Transaction" pathname="/create_articles" />
 
 
               {/* <!-- Menu Item Calendar -->

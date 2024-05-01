@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "../css/globals.css";
 import { ReduxProvider } from "@/redux/provider";
 import { interFont } from "@/utils/font";
+import { PrimeReactProvider } from 'primereact/api';
 
 
 export const metadata: Metadata = {
@@ -17,13 +18,15 @@ export default function RootLayout({
 }>) {
   return (
     <ReduxProvider>
-      <html lang="en">
-        <body >
-          <div className={` ${interFont.className} dark:bg-boxdark-2 dark:text-bodydark`}>
-            {children}
-          </div>
-        </body>
-      </html>
+      <PrimeReactProvider>
+        <html lang="en">
+          <body >
+            <div className={` ${interFont.className} dark:bg-boxdark-2 dark:text-bodydark`}>
+              {children}
+            </div>
+          </body>
+        </html>
+      </PrimeReactProvider>
     </ReduxProvider>
   );
 }
