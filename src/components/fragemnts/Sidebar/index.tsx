@@ -120,7 +120,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               {/* <!-- Menu Item Dashboard --> */}
               <NavigationList icon={<RxDashboard size={19} />} title="Dasboard" pathname="/dashboard" />
               <NavigationList icon={<FaMoneyBills size={19} />} title="Transaction" pathname="/transaction" />
-              <NavigationList icon={<FaFilePen size={19} />} title="History Transaction" pathname="/create_articles" />
+              <NavigationList icon={<FaFilePen size={19} />} title="History Transaction" pathname="/history_transaction" />
 
 
               {/* <!-- Menu Item Calendar -->
